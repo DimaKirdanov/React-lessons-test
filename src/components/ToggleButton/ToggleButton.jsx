@@ -6,10 +6,20 @@ class ToggleButton extends Component {
     static defaultProps = {
         type: "submit"
     }
+    state = {
+        active: false,
+    }
+    handleClick = () => { 
+ 
+        this.setState(({active}) => {
+            return {active: !active}
+         })
+    }
     render() { 
         const { text, type } = this.props;
+        const { active } = this.state;
         return (
-            <button className={styles.btn} type = {type}>{text}</button>
+            <button onClick={this.handleClick} className={active ? `${styles.btn} ${styles.active}` : styles.btn} type = {type}>{text}</button>
         )
     }
 }
