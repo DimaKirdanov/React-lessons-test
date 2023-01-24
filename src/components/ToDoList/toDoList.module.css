@@ -1,0 +1,27 @@
+.item {
+  width: 500px;
+ 
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  border: 1px solid black;
+
+
+}
+.text {
+  font-size: 15px;
+}
+.button {
+  transition: all 0.25s cubic-bezier(0.5, 2, 0.9, 2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: red;
+  outline: 5px solid red;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: wavy;
+}
